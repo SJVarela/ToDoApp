@@ -6,8 +6,8 @@ namespace ToDoApp.Services
 {
     public interface IToDoItemService
     {
-        Task<ToDoItem[]> GetIncompleteItemsAsync();
-        Task<bool> AddItemAsync(ToDoItem newItem);
-        Task<bool> MarkDoneAsync(Guid id);
+        Task<ToDoItem[]> GetIncompleteItemsAsync(ApplicationUser user);
+        Task<bool> AddItemAsync(ToDoItem newItem, ApplicationUser user);
+        Task<bool> MarkDoneAsync(Guid id, ApplicationUser user);
     }
 }
